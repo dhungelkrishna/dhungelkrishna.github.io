@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles if needed */
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="text-xl font-bold text-gray-800">Krishna Dhungel</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#home" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Home</a>
+                    <a href="#about" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">About</a>
+                    <a href="#skills" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Skills</a>
+                    <a href="#projects" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Projects</a>
+                    <a href="#contact" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon for menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#home" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Home</a>
+                <a href="#about" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">About</a>
+                <a href="#skills" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Skills</a>
+                <a href="#projects" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Projects</a>
+                <a href="#contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white pt-16">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to My Portfolio</h1>
+            <p class="text-xl md:text-2xl mb-8">Full-Stack Developer | Java, Django, React Expert</p>
+            <a href="#contact" class="bg-blue border border-white text-gray-100 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 hover:text-indigo-600">Download CV</a>
+            <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 ml-5">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://avatars.githubusercontent.com/u/75516392?v=4" alt="Profile" class="rounded-full mx-auto border-2 border-indigo-100">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg mb-4">Hello! I'm Krishna Dhungel, a passionate full-stack developer with expertise in building robust web applications. I specialize in backend technologies like Java Spring Boot and Django, frontend frameworks like React and Next.js, and creating RESTful APIs.</p>
+                    <p class="text-lg">I enjoy turning complex problems into simple, beautiful, and intuitive solutions. When I'm not coding, you'll find multiple skills in me.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">Java</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://camo.githubusercontent.com/53f0f04650bfc2aef2ec4fd578d1fca0ef7ecafe5a802eea6b8ee597cad9f936/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f737072696e67696f2f737072696e67696f2d69636f6e2e737667" alt="Spring Boot" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">Spring Boot</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">Django</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">React</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="Next.js" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">Next.js</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg" alt="TypeScript" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">TypeScript</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.svg" alt="REST API" class="mx-auto mb-4 w-[100px] h-auto">
+                    <p class="font-semibold">REST API Development</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git/GitHub" class="mx-auto mb-4">
+                    <p class="font-semibold">Git & GitHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x200" alt="Project 1" class="mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Project 1: E-Commerce Site</h3>
+                    <p class="mb-4">Built with Next.js, TypeScript, and Tailwind CSS. Integrated REST APIs with Spring Boot backend.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View on GitHub</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x200" alt="Project 2" class="mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Project 2: Restaurant Management System</h3>
+                    <p class="mb-4">Developed using Django for backend and React for frontend. Features include user authentication and order tracking.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View on GitHub</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x200" alt="Project 3" class="mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2">Project 3: API Service</h3>
+                    <p class="mb-4">RESTful API built with Java Spring Boot, including authentication and data persistence.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Me</h2>
+        <form class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="mb-6">
+                <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Full Name</label>
+                <input type="text" id="name" placeholder="Your full name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-indigo-500 focus:border-indigo-500 transition ease-in-out">
+            </div>
+            <div class="mb-6">
+                <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email Address</label>
+                <input type="email" id="email" placeholder="Your email address" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-indigo-500 focus:border-indigo-500 transition ease-in-out">
+            </div>
+            <div class="mb-6 col-span-2">
+                <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Your Message</label>
+                <textarea id="message" placeholder="Write your message here" rows="6" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-indigo-500 focus:border-indigo-500 transition ease-in-out"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition ease-in-out transform hover:scale-105 md:col-span-2">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Krishna Dhungel. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://github.com/dhungelkrishna" class="hover:text-gray-300">GitHub</a>
+                <a href="https://linkedin.com/in/dhungel-krishna" class="hover:text-gray-300">LinkedIn</a>
+                <a href="https://x.com/PM_krishna" class="hover:text-gray-300">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu and smooth scrolling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
