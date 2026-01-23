@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Krishna Dhungel</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
       .gradient-line {
@@ -48,8 +49,8 @@
         }
       }
       .gradient-line.reverse::before {
-  animation-direction: reverse;
-}
+        animation-direction: reverse;
+      }
     </style>
   </head>
 
@@ -253,7 +254,6 @@
       <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
       <div class="gradient-line"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-
         <!-- Scrolling Container -->
         <div class="relative w-full overflow-hidden">
           <div class="flex items-center w-max animate-skill-scroll gap-24">
@@ -276,24 +276,22 @@
 
             <div class="skill-item">
               <img
-              class="h-8 w-auto mx-auto"
+                class="h-8 w-auto mx-auto"
                 src="https://cdn.worldvectorlogo.com/logos/django.svg"
                 alt="Django"
               />
               <p>Django</p>
             </div>
 
-             <div class="skill-item">
+            <div class="skill-item">
               <img
-              class="h-16 w-24"
+                class="h-16 w-24"
                 src="https://www.django-rest-framework.org/img/logo.png"
                 alt="Django Rest Framework"
-                style="height: 80px; width: auto;"
+                style="height: 80px; width: auto"
               />
               <p>DRF</p>
             </div>
-
-
 
             <div class="skill-item">
               <img
@@ -416,10 +414,10 @@
         }
 
         @media (max-width: 640px) {
-  .skill-item img {
-    width: 30px;
-  }
-}
+          .skill-item img {
+            width: 30px;
+          }
+        }
 
         .skill-item p {
           font-weight: 600;
@@ -449,7 +447,10 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-md"
+            data-aos="fade-right"
+          >
             <img
               src="https://raw.githubusercontent.com/dhungelkrishna/bankapp/refs/heads/master/img/account_dashboard.png"
               alt="Project 1"
@@ -465,7 +466,7 @@
               >View on GitHub</a
             >
           </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div class="bg-gray-100 p-6 rounded-lg shadow-md" data-aos="flip-up">
             <img
               src="./res/Blog_Website_Screene.png"
               alt="Project 2"
@@ -482,7 +483,10 @@
               >View on GitHub</a
             >
           </div>
-          <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-md"
+            data-aos="fade-left"
+          >
             <img
               src="./res/library_project.png"
               alt="Project 3"
@@ -560,6 +564,7 @@
         <!-- Right Side: WhatsApp QR and Connect Section -->
         <div
           class="flex flex-col justify-center items-center bg-white p-8 rounded-lg shadow-lg md:w-1/3 sm:w-full mt-8 md:mt-0"
+          data-aos="zoom-out-left"
         >
           <h3 class="text-xl font-semibold text-center text-gray-800 mb-6">
             Connect with Me on <br />
@@ -672,6 +677,14 @@
       window.onload = function () {
         inactivityTimer = setTimeout(startScrolling, inactivityThreshold); // Start after 2 seconds
       };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true, // animation happens only once
+      });
     </script>
   </body>
 </html>
