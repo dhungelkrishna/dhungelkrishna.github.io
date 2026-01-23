@@ -1,10 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Krishna Dhungel</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .gradient-line {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        overflow: hidden;
+        background-color: white;
+      }
+
+      .gradient-line::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 300%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+
+          rgba(186, 230, 253, 1) 10%,
+          rgb(245, 73, 5) 20%,
+          rgba(56, 189, 248, 1) 35%,
+          rgb(186, 112, 255) 50%,
+          rgba(2, 197, 28, 0.75) 65%,
+          rgba(241, 179, 8, 0.979) 80%,
+          rgba(169, 8, 218, 0.918) 90%,
+
+          transparent 100%
+        );
+        filter: blur(1px);
+        animation: rich-flow 6s linear infinite;
+      }
+
+      @keyframes rich-flow {
+        from {
+          transform: translateX(-66%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+      .gradient-line.reverse::before {
+  animation-direction: reverse;
+}
+    </style>
   </head>
 
   <body class="bg-gray-100 font-sans">
@@ -132,7 +178,7 @@
       </nav>
 
       <section class="exact-hero flex items-center justify-center pt-16">
-        <div class="text-center px-4 mt-20">
+        <div class="text-center px-4 mt-32">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">
             Hey, It's Krishna Dhungel
           </h1>
@@ -141,7 +187,12 @@
           </p>
 
           <button
-            onclick="window.open('https://drive.google.com/file/d/1KS_lGMbOif45DNB462kH47Zmg-TztIIF/view?usp=sharing', '_blank')"
+            onclick="
+              window.open(
+                'https://drive.google.com/file/d/1KS_lGMbOif45DNB462kH47Zmg-TztIIF/view?usp=sharing',
+                '_blank',
+              )
+            "
             class="bg-blue border border-white text-gray-100 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 hover:text-indigo-600 z-10"
           >
             Download CV
@@ -198,77 +249,200 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-              alt="Java"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">Java</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://spring.io/img/logos/spring-initializr.svg"
-              alt="Spring Boot"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">Spring Boot</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/django.svg"
-              alt="Django"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">Django</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-              alt="React"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">React</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
-              alt="Next.js"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">Next.js</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg"
-              alt="TypeScript"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">TypeScript</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.svg"
-              alt="REST API"
-              class="mx-auto mb-4 w-[100px] h-auto"
-            />
-            <p class="font-semibold">REST API Development</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-              alt="Git/GitHub"
-              class="mx-auto mb-4"
-            />
-            <p class="font-semibold">Git & GitHub</p>
+    <section id="skills" class="py-6 bg-gray-100 overflow-hidden">
+      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <div class="gradient-line"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+
+        <!-- Scrolling Container -->
+        <div class="relative w-full overflow-hidden">
+          <div class="flex items-center w-max animate-skill-scroll gap-24">
+            <!-- ===== SKILLS (SET 1) ===== -->
+            <div class="skill-item">
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                alt="Java"
+              />
+              <p>Java</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://spring.io/img/logos/spring-initializr.svg"
+                alt="Spring Boot"
+              />
+              <p>Spring Boot</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+              class="h-8 w-auto mx-auto"
+                src="https://cdn.worldvectorlogo.com/logos/django.svg"
+                alt="Django"
+              />
+              <p>Django</p>
+            </div>
+
+             <div class="skill-item">
+              <img
+              class="h-16 w-24"
+                src="https://www.django-rest-framework.org/img/logo.png"
+                alt="Django Rest Framework"
+                style="height: 80px; width: auto;"
+              />
+              <p>DRF</p>
+            </div>
+
+
+
+            <div class="skill-item">
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                alt="React"
+              />
+              <p>React</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
+                alt="Next.js"
+              />
+              <p>Next.js</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg"
+                alt="TypeScript"
+              />
+              <p>TypeScript</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.svg"
+                alt="REST API"
+              />
+              <p>REST API</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                alt="Git"
+              />
+              <p>Git & GitHub</p>
+            </div>
+
+            <!-- ===== SKILLS (SET 2 - DUPLICATE FOR LOOP) ===== -->
+            <div class="skill-item">
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                alt="Java"
+              />
+              <p>Java</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://spring.io/img/logos/spring-initializr.svg"
+                alt="Spring Boot"
+              />
+              <p>Spring Boot</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/django.svg"
+                alt="Django"
+              />
+              <p>Django</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                alt="React"
+              />
+              <p>React</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
+                alt="Next.js"
+              />
+              <p>Next.js</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg"
+                alt="TypeScript"
+              />
+              <p>TypeScript</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.svg"
+                alt="REST API"
+              />
+              <p>REST API</p>
+            </div>
+
+            <div class="skill-item">
+              <img
+                src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                alt="Git"
+              />
+              <p>Git & GitHub</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Custom CSS -->
+      <style>
+        .skill-item {
+          @apply flex flex-col items-center justify-center min-w-[160px];
+        }
+
+        .skill-item img {
+          width: 80px;
+          height: auto;
+          margin-bottom: 0.15rem;
+        }
+
+        @media (max-width: 640px) {
+  .skill-item img {
+    width: 30px;
+  }
+}
+
+        .skill-item p {
+          font-weight: 600;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        @keyframes skill-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-skill-scroll {
+          animation: skill-scroll 25s linear infinite;
+        }
+      </style>
     </section>
+
+    <div class="gradient-line reverse"></div>
 
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
