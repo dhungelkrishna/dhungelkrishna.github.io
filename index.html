@@ -51,6 +51,12 @@
       .gradient-line.reverse::before {
         animation-direction: reverse;
       }
+
+      #particles-js {
+  pointer-events: none; /* allows clicks to pass through */
+  z-index: 0;           /* make sure it’s behind content */
+}
+
     </style>
   </head>
 
@@ -178,6 +184,8 @@
         </div>
       </nav>
 
+      
+
       <section class="exact-hero flex items-center justify-center pt-16">
         <div class="text-center px-4 mt-32">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -206,6 +214,8 @@
           >
         </div>
       </section>
+      <div id="particles-js" class="absolute inset-0 w-full h-full z-10"></div>
+
     </section>
 
     <!-- About Section -->
@@ -477,14 +487,17 @@
               Developed using Django MVT. Features include auth, add, remove,
               comment, filtering.
             </p>
-            <div class="flex gap-3">
+            <div class="flex gap-2 items-center">
 
               <a href="https://github.com/dhungelkrishna/blog_django_mvt"
-                class="text-indigo-600 hover:underline"
-                >View on GitHub</a>
-               <a href="https://mvt-blog-system.onrender.com/" blank="_blank" title="See Live"
-                class="text-indigo-600 hover:underline"
+                class="text-indigo-600 hover:underline hover:text-blue-800 transform hover:scale-125 transition-transform duration-300" title="View Source code" 
                 >
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 32 32" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><path d="M16 5.343c-6.196 0-11.219 5.023-11.219 11.219 0 4.957 3.214 9.162 7.673 10.645 0.561 0.103 0.766-0.244 0.766-0.54 0-0.267-0.010-1.152-0.016-2.088-3.12 0.678-3.779-1.323-3.779-1.323-0.511-1.296-1.246-1.641-1.246-1.641-1.020-0.696 0.077-0.682 0.077-0.682 1.126 0.078 1.72 1.156 1.72 1.156 1.001 1.715 2.627 1.219 3.265 0.931 0.102-0.723 0.392-1.219 0.712-1.498-2.49-0.283-5.11-1.246-5.11-5.545 0-1.226 0.438-2.225 1.154-3.011-0.114-0.285-0.501-1.426 0.111-2.97 0 0 0.941-0.301 3.085 1.15 0.894-0.25 1.854-0.373 2.807-0.377 0.953 0.004 1.913 0.129 2.809 0.379 2.14-1.453 3.083-1.15 3.083-1.15 0.613 1.545 0.227 2.685 0.112 2.969 0.719 0.785 1.153 1.785 1.153 3.011 0 4.31-2.624 5.259-5.123 5.537 0.404 0.348 0.761 1.030 0.761 2.076 0 1.5-0.015 2.709-0.015 3.079 0 0.299 0.204 0.648 0.772 0.538 4.455-1.486 7.666-5.69 7.666-10.645 0-6.195-5.023-11.219-11.219-11.219z"></path></svg>
+              
+              </a>
+               <a href="https://mvt-blog-system.onrender.com/" target="_blank" title="See Live"
+                class="text-indigo-600 font-bold hover:underline hover:text-blue-800 flex gap-1 transform hover:scale-125 transition-transform duration-300"
+                > View Live
               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
               </a>
             </div>
@@ -692,5 +705,31 @@
         once: true, // animation happens only once
       });
     </script>
+    <!-- Particles.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { 
+        "value": 0.8, 
+        "random": true,
+        "anim": { "enable": true, "speed": 1, "opacity_min": 0.2, "sync": false }
+      },
+      "size": { "value": 4, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "bounce" }
+    },
+    "interactivity": {
+      "events": { "onhover": { "enable": true, "mode": "repulse" } },
+      "modes": { "repulse": { "distance": 100, "duration": 0.4 } }
+    },
+    "retina_detect": true
+  });
+</script>
+
+
   </body>
 </html>
