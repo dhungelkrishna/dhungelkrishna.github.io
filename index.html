@@ -707,27 +707,51 @@
     </script>
     <!-- Particles.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
 <script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#ffffff" },
-      "shape": { "type": "circle" },
-      "opacity": { 
-        "value": 0.8, 
-        "random": true,
-        "anim": { "enable": true, "speed": 1, "opacity_min": 0.2, "sync": false }
-      },
-      "size": { "value": 4, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
-      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "bounce" }
+  tsParticles.load("particles-js", {
+  fullScreen: { enable: false },
+  particles: {
+    number: { value: 100, density: { enable: true, area: 800 } },
+    color: { value: "#ffffff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.6, random: true },
+    size: {
+      value: { min: 4, max: 8 },     // start medium-small
+      random: true,
+      animation: {
+        enable: true,
+        speed: 5,                    // how fast they grow (lower = slower grow)
+        minimumValue: 4,
+        sync: false,
+        destroy: "max",              // ← important: disappear when reaching max size
+        startValue: "min"            // start from smallest size
+      }
     },
-    "interactivity": {
-      "events": { "onhover": { "enable": true, "mode": "repulse" } },
-      "modes": { "repulse": { "distance": 100, "duration": 0.4 } }
+    move: {
+      enable: true,
+      speed: 1.2,
+      direction: "none",
+      outModes: { default: "bounce" }   // or "bounce"
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "bubble" },
+      onClick: { enable: false }
     },
-    "retina_detect": true
-  });
+    modes: {
+      bubble: {
+        distance: 200,
+        duration: 1,
+        size: 18,                    // grow to this size on hover
+        opacity: 0.8
+      }
+    }
+  },
+  detectRetina: true
+});
 </script>
 
 
