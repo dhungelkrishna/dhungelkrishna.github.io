@@ -8,6 +8,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
+      body {
+        overflow-x: hidden !important;
+      }
+
       .gradient-line {
         position: relative;
         width: 100%;
@@ -189,7 +193,7 @@
       <section class="exact-hero flex items-center justify-center pt-16">
         <div class="text-center px-4 mt-32">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">
-            Hey, It's Krishna Dhungel
+            Hi, It's Krishna Dhungel
           </h1>
           <p class="text-xl md:text-2xl mb-8">
             Full-Stack Developer | Java, Django, React Developer
@@ -673,18 +677,25 @@
       });
     </script>
     <!-- Auto scrolling idea.  -->
-    <script>
+<script>
   let inactivityTimer;
   let scrollInterval;
   const inactivityThreshold = 2000; // 2 seconds before auto-scroll
-  const scrollSpeed = 50; // pixels per scroll step
   const scrollIntervalTime = 15; // ms between scroll steps
   let isScrolling = false;
+
+  // Determine scroll speed based on screen height
+  function getScrollSpeed() {
+    const baseSpeed = window.innerHeight / 60; // ~1/60th of screen height per interval
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    return isMobile ? baseSpeed * 1.5 : baseSpeed; // 50% faster on mobile
+  }
 
   // Function to smoothly scroll
   function autoScroll() {
     if (!isScrolling) return;
 
+    const scrollSpeed = getScrollSpeed();
     window.scrollBy({
       top: scrollSpeed,
       left: 0,
